@@ -1,0 +1,475 @@
+:root {
+    /*gradients*/
+    --black-gradient             : linear-gradient(180deg, rgba(182, 182, 182, 1) 0%, rgba(235, 235, 235, 0) 100%);
+    --blue-gradient              : linear-gradient(180deg, rgba(202, 219, 235, 1) 0%, rgba(235, 235, 235, 0) 100%);
+    --green-gradient             : linear-gradient(180deg, rgba(221, 234, 217, 1) 0%, rgba(235, 235, 235, 0) 100%);
+    --red-gradient               : linear-gradient(180deg, rgba(243, 214, 209, 1) 0%, rgba(235, 235, 235, 0) 100%);
+    --white-gradient             : linear-gradient(180deg, rgba(250, 250, 250, 1) 0%, rgba(235, 235, 235, 0) 100%);
+    --black-gradient-underground : rgb(182, 182, 182);
+    --blue-gradient-underground  : rgb(202, 219, 235);
+    --green-gradient-underground : rgb(221, 234, 217);
+    --red-gradient-underground   : rgb(243, 214, 209);
+    --white-gradient-underground : rgb(250, 250, 250);
+}
+
+html {
+    box-sizing : border-box;
+}
+
+*, *::before, *::after {
+    box-sizing : inherit;
+}
+
+body {
+    color       : #000000;
+    font-family : "Inter", sans-serif;
+    font-size   : 16px;
+    font-weight : 500;
+    line-height : 1.2;
+}
+
+a {
+    color           : inherit;
+    display         : inline-block;
+    text-decoration : none;
+}
+
+button {
+    background-color : transparent;
+    border           : none;
+    color            : inherit;
+    cursor           : pointer;
+    display          : inline-block;
+    font             : inherit;
+    line-height      : inherit;
+    padding          : 0;
+}
+
+ul {
+    list-style-type : none;
+}
+
+img {
+    max-height      : 100%;
+    max-width       : 100%;
+    object-fit      : contain;
+    object-position : center;
+}
+
+.container {
+    margin    : 0 auto;
+    max-width : 1220px;
+    padding   : 0 10px;
+}
+
+.header {
+    overflow-x : hidden;
+}
+
+.header[data-gradient="red"] {
+    background : var(--red-gradient-underground);
+    background : var(--red-gradient);
+}
+
+.header[data-gradient="blue"] {
+    background: var(--blue-gradient-underground);
+    background: var(--blue-gradient);
+}
+
+.header[data-gradient="green"] {
+    background: var(--green-gradient-underground);
+    background: var(--green-gradient);
+}
+
+.header[data-gradient="white"] {
+    background: var(--white-gradient-underground);
+    background: var(--white-gradient);
+}
+
+.header[data-gradient="black"] {
+    background: var(--black-gradient-underground);
+    background: var(--black-gradient);
+}
+
+.header__container {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    min-height      : 100vh;
+}
+
+
+.navigation {
+    align-items     : center;
+    display         : flex;
+    justify-content : space-between;
+    padding         : 40px 0;
+}
+
+.menu {
+    align-items : center;
+    column-gap  : 40px;
+    display     : flex;
+}
+
+.menu__btn {
+    background-color : #000000;
+    color            : #ffffff;
+}
+
+.btn {
+    border-radius  : 30px;
+    font-weight    : 700;
+    min-width      : 150px;
+    padding        : 15px;
+    text-transform : uppercase;
+}
+
+.hero {
+    margin         : auto 0;
+    padding-bottom : 50px;
+    position       : relative;
+    text-align     : center;
+    user-select    : none;
+}
+
+.hero__title {
+    display     : flex;
+    font-size   : 210px;
+    font-weight : 700;
+    left        : 0;
+    position    : absolute;
+    top         : 17%;
+}
+
+.hero__title span {
+    position : relative;
+}
+
+.hero__title--air {
+    z-index : 3;
+}
+
+.hero__title--pod {
+    z-index : 1;
+}
+
+.hero__title--s {
+    top     : 45px;
+    z-index : 3;
+}
+
+.hero__title--m {
+    right   : 55px;
+    top     : 255px;
+    z-index : 3;
+}
+
+.hero__title--ax {
+    right   : 140px;
+    top     : 390px;
+    z-index : 1;
+}
+
+.hero__img {
+    position : relative;
+    z-index  : 2;
+}
+
+.color {
+    margin-bottom : 180px;
+    padding-top   : 45px;
+}
+
+.color__heading {
+    margin     : 0 auto 80px;
+    max-width  : 560px;
+    text-align : center;
+}
+
+.color__title {
+    font-size     : 36px;
+    font-weight   : 700;
+    margin-bottom : 20px;
+}
+
+.color__list {
+    display         : flex;
+    gap             : 40px;
+    justify-content : center;
+    padding         : 0 20px;
+}
+
+.color__item {
+    width : calc(25% - 30px);
+}
+
+.color__button {
+    border        : 1px solid #777777;
+    border-radius : 20px;
+    height        : 100%;
+    padding       : 50px;
+    text-align    : center;
+    width         : 100%;
+}
+
+.composition {
+    margin-bottom : 180px;
+}
+
+.section__title {
+    font-size     : 64px;
+    font-weight   : 700;
+    margin-bottom : 20px;
+    text-align    : center;
+}
+
+.composition__text {
+    margin     : 0 auto 40px;
+    max-width  : 653px;
+    text-align : center;
+}
+
+.composition__inner {
+    column-gap      : 50px;
+    display         : flex;
+    justify-content : space-between;
+    margin          : 0 auto;
+    max-width       : 625px;
+}
+
+.composition__info {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    max-width       : 230px;
+    row-gap         : 20px;
+}
+
+.case {
+    background-color : #fafafa;
+    padding          : 80px 0;
+    text-align       : center;
+}
+
+.case__text {
+    margin-bottom : 40px;
+}
+
+.case__text span {
+    font-weight : 700;
+}
+
+.battery-life {
+    background-color : #fafafa;
+    padding          : 80px 0 100px;
+    text-align       : center;
+}
+
+.battery-life .section__title {
+    margin-bottom : 40px;
+}
+
+.battery-life__time {
+    display       : block;
+    font-size     : 210px;
+    font-weight   : 700;
+    margin-bottom : 40px;
+}
+
+.battery-life__text {
+    margin    : 0 auto;
+    max-width : 405px;
+}
+
+.sound {
+    align-items         : flex-end;
+    background-image    : url("../images/backgrounds/sound-bg.jpg");
+    background-position : center top;
+    background-repeat   : no-repeat;
+    background-size     : cover;
+    display             : flex;
+    justify-content     : center;
+    min-height          : 200vh;
+    padding-bottom      : 40vh;
+    text-align          : center;
+}
+
+.sound__info {
+    margin    : 0 auto;
+    max-width : 300px;
+}
+
+.sound__text {
+    color         : #ffffff;
+    margin-bottom : 40px;
+}
+
+.sound__btn {
+    background-color : #ffffff;
+    color            : #000000;
+}
+
+.footer {
+    background-color : #000000;
+    color            : #ffffff;
+    font-weight      : 700;
+    padding          : 50px 0 40px;
+}
+
+.footer__info {
+    margin-bottom : 80px;
+    text-align    : center;
+}
+
+.footer__info-link {
+    margin-bottom : 20px;
+}
+
+.footer__tel-text {
+    margin-bottom : 20px;
+}
+
+.footer__nav {
+    display         : flex;
+    flex-wrap       : wrap;
+    gap             : 20px;
+    justify-content : center;
+}
+
+@media (max-width : 1200px) {
+    .color__list {
+        flex-wrap : wrap
+    }
+
+    .color__item {
+        width : calc((100% / 3) - (80px / 3));
+    }
+
+    .hero__title {
+        font-size : 17vw;
+        max-width : 100%;
+    }
+
+    .hero__title--s {
+        top : 4vw;
+    }
+
+    .hero__title--m {
+        right : 4vw;
+        top   : 22vw;
+    }
+
+    .hero__title--ax {
+        right : 11vw;
+        top   : 33vw;
+    }
+
+    .hero__img {
+        max-height : 65vw;
+    }
+}
+
+@media (max-width : 768px) {
+    .color, .composition, .color__heading {
+        margin-bottom : 60px;
+    }
+
+    .case, .battery-life {
+        padding : 60px 0;
+    }
+
+    .section__title {
+        font-size : 36px;
+    }
+
+    .battery-life__time {
+        font-size : 110px;
+    }
+
+    .battery-life .section__title, .battery-life__time {
+        margin-bottom : 20px;
+    }
+
+    .color__list {
+        gap : 16px;
+    }
+
+    .color__item {
+        width : calc(50% - 8px);
+    }
+}
+
+@media (max-width : 560px) {
+    .composition, .color__heading {
+        margin-bottom : 40px;
+    }
+
+    .case, .battery-life {
+        padding : 40px 0;
+    }
+
+    .composition__inner {
+        flex-wrap       : wrap;
+        justify-content : center;
+    }
+
+    .composition__info {
+        margin-bottom : 20px;
+        max-width     : 100%;
+        text-align    : center;
+    }
+
+    .hero__title {
+        font-size : 16vw;
+        top       : 15%;
+    }
+
+    .hero__img {
+        max-height : 60vw;
+    }
+
+    .hero__title--m {
+        right : 2vw;
+    }
+
+    .hero__title--ax {
+        right : 9vw;
+    }
+
+    .navigation {
+        flex-direction : column;
+    }
+
+    .header__logo {
+        margin-bottom : 20px;
+    }
+
+    .menu {
+        flex-wrap       : wrap;
+        justify-content : space-between;
+    }
+}
+
+@media (max-width : 475px) {
+    .color__item {
+        width : 100%;
+    }
+
+    .color__title, .section__title {
+        font-size : 24px;
+    }
+
+    .battery-life__time {
+        font-size : 92px;
+    }
+
+    .menu__item:has(.menu__btn) {
+        margin-top : 20px;
+    }
+
+    .menu__item:has(.menu__btn),
+    .menu__btn {
+        width : 100%;
+    }
+}
